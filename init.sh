@@ -1,4 +1,4 @@
-sudo apt-get update -y && apt-get install -y && apt-get upgrade -y
+sudo apt-get update -y
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -16,3 +16,4 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
  sudo install minikube-linux-amd64 /usr/local/bin/minikube
  minikube start --driver=none --insecure-registry=localhost:5000
+minikube addons enable registry
